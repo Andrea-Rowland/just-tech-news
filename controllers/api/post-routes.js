@@ -4,6 +4,7 @@ const sequelize = require('../../config/connection');
 
 // get all users
 router.get('/', (req, res) => {
+  console.log('this is the post route')
   Post.findAll({
     order: [['created_at', 'DESC']],
     attributes: [
